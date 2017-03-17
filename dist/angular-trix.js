@@ -1,6 +1,7 @@
-/*! angular-trix - v1.0.0 - 2015-12-09
+/*! angular-trix - v1.0.2 - 2017-03-17
 * https://github.com/sachinchoolur/angular-trix
-* Copyright (c) 2015 Sachin; Licensed MIT */
+* Copyright (c) 2017 Sachin; Licensed MIT */
+// https://github.com/sachinchoolur/angular-trix
 (function() {
     'use strict';
     angular.module('angularTrix', []).directive('angularTrix', function() {
@@ -31,7 +32,7 @@
                     }
 
                     element.on('trix-change', function() {
-                        ngModel.$setViewValue(element.html());
+                        ngModel.$setViewValue(element[0].inputElement.value);
                     });
                 };
 
